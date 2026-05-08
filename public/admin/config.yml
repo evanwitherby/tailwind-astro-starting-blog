@@ -3,15 +3,24 @@ backend:
   repo: evanwitherby/tailwind-astro-starting-blog
   branch: main
   base_url: https://blog-cms-oauth.ndsk97rct5.workers.dev
-media_folder: "public/images"
-public_folder: "/images"
+media_folder: public/images
+public_folder: /images
 collections:
-  - name: "blog"
-    label: "Blog Posts"
-    folder: "src/content/blog"
+  - name: blog
+    label: Blog Posts
+    folder: src/content/blog
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "pubDatetime", widget: "datetime" }
-      - { label:
+      - label: Title
+        name: title
+        widget: string
+      - label: Publish Date
+        name: pubDatetime
+        widget: datetime
+      - label: Description
+        name: description
+        widget: string
+      - label: Body
+        name: body
+        widget: markdown
